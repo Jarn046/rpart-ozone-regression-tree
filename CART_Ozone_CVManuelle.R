@@ -1,8 +1,4 @@
 data("Ozone", package = "mlbench")
-str(Ozone)
-
-y <- Ozone$V4
-X <- Ozone[, -4]
 
 # construction Amax(cp=0) + extraction cp table + affichage de l'arbre 
 library(rpart)
@@ -59,3 +55,5 @@ rpart.plot(final_tree_SE)
 
 print(best_index)
 print(best_index_SE)
+
+#Problème de décalage sur la sélection entre CV manuelle ici et CV auto sur CART_Ozone.R
